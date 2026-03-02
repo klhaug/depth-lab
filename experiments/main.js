@@ -1,26 +1,13 @@
-const age = 12
+import { counter }  from "./actions.js";
 
-console.log("TESTING COMPARISONS")
-console.log("--------------------")
-console.log("Values")
+const button = document.getElementById("button1")
+const title = document.getElementById("title")
 
+button.addEventListener("click", (e) => console.log(e) )
+window.addEventListener("keydown", (e) => {
+    title.innerText = `Last key pressed: ${e.key}`
+    console.log(e)
+    })
 
-let myName = "Kristian"
+const increaseOne = counter(1)
 
-let myFirstName = myName
-
-myName = 'Anniken'
-
-console.log("myName:", myName)
-console.log("myFirstName:", myFirstName)
-
-console.log("--------------------")
-console.log("References")
-
-let firstArray = [1, 0, 2, 3]
-let secondArray = firstArray
-
-firstArray[0] = 69
-
-console.log("firstArray", firstArray)
-console.log("secondArray", secondArray)
